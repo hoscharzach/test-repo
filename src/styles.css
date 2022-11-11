@@ -1,0 +1,45 @@
+.App {
+  font-family: sans-serif;
+  position: relative;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 50px;
+  justify-content: center;
+  align-items: center;
+}
+
+.highlightText {
+  padding: 10px;
+}
+
+#overlay {
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  position: fixed;
+  z-index: 2;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+img {
+  width: 200px;
+  height: 200px;
+}
+
+#highlight::after {
+  content: "Check out this thing!";
+  position: absolute;
+  /* display: inline-flex; */
+  justify-content: center;
+  align-items: center;
+  margin-left: 60px;
+  height: var(--height);
+  width: var(--width);
+  z-index: 20;
+  background-color: none;
+  color: white;
+}
